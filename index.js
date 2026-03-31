@@ -35,4 +35,6 @@ app.post("/convert", upload.single("file"), async (req, res) => {
   }
 });
 
-app.listen(3000, () => console.log("Servidor HEIC ativo"));
+const PORT = process.env.PORT || 8080;
+app.listen(PORT, () => console.log("Servidor HEIC ativo na porta " + PORT));
+
